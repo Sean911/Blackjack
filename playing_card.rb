@@ -1,4 +1,5 @@
 class PlayingCard
+  attr_reader :rank, :suit
 
   def initialize (rank, suit)
     @rank = rank
@@ -6,7 +7,7 @@ class PlayingCard
   end
 
   def facecard?
-    ['J','Q','K'].include?(@rank)
+    ['J','Q','K'].include?(rank)
   end
 
 end

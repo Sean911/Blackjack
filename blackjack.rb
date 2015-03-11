@@ -1,6 +1,26 @@
-#!/usr/bin/env ruby
-require relative 'deck'
-require relative 'hand'
+require_relative 'playing_card'
+require_relative 'deck'
+require_relative 'hand'
+require 'pry'
 
-SUITS  = ["♤", "♧", "♡", "♢"]
-VALUES = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K", "A"]
+
+
+
+
+deck = Deck.new
+#Deal initial hand
+player1 = Hand.new("player", deck)
+dealer = Hand.new("dealer", deck)
+
+
+
+
+
+
+
+#Display score
+puts player1.calculate_score
+puts dealer.calculate_score
+
+
+#Prompt player to hit or stand
